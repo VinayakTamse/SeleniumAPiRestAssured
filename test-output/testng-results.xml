@@ -1,17 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-31T16:36:17 IST" name="Default suite" finished-at="2022-03-31T16:36:22 IST" duration-ms="5163">
+  <suite started-at="2022-04-01T11:25:09 IST" name="APITestSuite" finished-at="2022-04-01T11:25:18 IST" duration-ms="8743">
     <groups>
     </groups>
-    <test started-at="2022-03-31T16:36:17 IST" name="Default test" finished-at="2022-03-31T16:36:22 IST" duration-ms="5163">
-      <class name="selenium.features.app.main.tests.API_Request_Test_lambook_juneau">
-        <test-method signature="verify_api_get()[pri:0, instance:selenium.features.app.main.tests.API_Request_Test_lambook_juneau@23c30a20]" started-at="2022-03-31T16:36:17 IST" name="verify_api_get" finished-at="2022-03-31T16:36:22 IST" duration-ms="5074" status="PASS">
+    <test started-at="2022-04-01T11:25:09 IST" name="API_GET" finished-at="2022-04-01T11:25:14 IST" duration-ms="4763">
+      <class name="selenium.features.app.main.tests.API_Test_MOD">
+        <test-method signature="test_api_get(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:selenium.features.app.main.tests.API_Test_MOD@36916eb0]" started-at="2022-04-01T11:25:09 IST" name="test_api_get" finished-at="2022-04-01T11:25:14 IST" duration-ms="4685" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://testingvinu.pythonanywhere.com/api2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/employee]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verify_api_get -->
-      </class> <!-- selenium.features.app.main.tests.API_Request_Test_lambook_juneau -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- test_api_get -->
+      </class> <!-- selenium.features.app.main.tests.API_Test_MOD -->
+    </test> <!-- API_GET -->
+    <test started-at="2022-04-01T11:25:14 IST" name="API_GET_ID" finished-at="2022-04-01T11:25:15 IST" duration-ms="1410">
+      <class name="selenium.features.app.main.tests.API_Test_MOD_2">
+        <test-method signature="test_api_get(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:selenium.features.app.main.tests.API_Test_MOD_2@63376bed]" started-at="2022-04-01T11:25:14 IST" name="test_api_get" finished-at="2022-04-01T11:25:15 IST" duration-ms="1402" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://testingvinu.pythonanywhere.com/api2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/employee/20]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[GET]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_api_get -->
+      </class> <!-- selenium.features.app.main.tests.API_Test_MOD_2 -->
+    </test> <!-- API_GET_ID -->
+    <test started-at="2022-04-01T11:25:15 IST" name="API_DELETE" finished-at="2022-04-01T11:25:16 IST" duration-ms="1010">
+      <class name="selenium.features.app.main.tests.API_Test_MOD_3">
+        <test-method signature="test_api_get(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:selenium.features.app.main.tests.API_Test_MOD_3@750e2b97]" started-at="2022-04-01T11:25:15 IST" name="test_api_get" finished-at="2022-04-01T11:25:16 IST" duration-ms="1003" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://testingvinu.pythonanywhere.com/api2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/employee/15/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DELETE]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [204] but found [404]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [204] but found [404]
+at org.testng.Assert.fail(Assert.java:110)
+at org.testng.Assert.failNotEquals(Assert.java:1413)
+at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+at org.testng.Assert.assertEquals(Assert.java:131)
+at org.testng.Assert.assertEquals(Assert.java:1240)
+at org.testng.Assert.assertEquals(Assert.java:1274)
+at selenium.features.app.main.tests.API_Test_MOD_3.test_api_get(API_Test_MOD_3.java:20)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:808)
+at org.testng.TestRunner.run(TestRunner.java:603)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:429)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:423)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:383)
+at org.testng.SuiteRunner.run(SuiteRunner.java:326)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1249)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1169)
+at org.testng.TestNG.runSuites(TestNG.java:1092)
+at org.testng.TestNG.run(TestNG.java:1060)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_api_get -->
+      </class> <!-- selenium.features.app.main.tests.API_Test_MOD_3 -->
+    </test> <!-- API_DELETE -->
+    <test started-at="2022-04-01T11:25:16 IST" name="API_POST" finished-at="2022-04-01T11:25:18 IST" duration-ms="1357">
+      <class name="selenium.features.app.main.tests.API_Test_MOD_4">
+        <test-method signature="post_test(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:selenium.features.app.main.tests.API_Test_MOD_4@54c5a2ff]" started-at="2022-04-01T11:25:16 IST" name="post_test" finished-at="2022-04-01T11:25:18 IST" duration-ms="1351" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[https://testingvinu.pythonanywhere.com/api2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[/employee/]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[POST]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- post_test -->
+      </class> <!-- selenium.features.app.main.tests.API_Test_MOD_4 -->
+    </test> <!-- API_POST -->
+  </suite> <!-- APITestSuite -->
 </testng-results>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="APITestSuite">
+	<test thread-count="1" name="API_GET">
+		<parameter name="BaseURI" value="https://testingvinu.pythonanywhere.com/api2" />
+		<parameter name="path" value="/employee" />
+		<parameter name="method" value="GET" />
+		<classes>
+			<class name="selenium.features.app.main.tests.API_Test_MOD" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="1" name="API_GET_ID">
+		<parameter name="BaseURI" value="https://testingvinu.pythonanywhere.com/api2" />
+		<parameter name="path" value="/employee/20" />
+		<parameter name="method" value="GET" />
+		<classes>
+			<class name="selenium.features.app.main.tests.API_Test_MOD_2" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="1" name="API_DELETE">
+		<parameter name="BaseURI" value="https://testingvinu.pythonanywhere.com/api2" />
+		<parameter name="path" value="/employee/15/" />
+		<parameter name="method" value="DELETE" />
+		<classes>
+			<class name="selenium.features.app.main.tests.API_Test_MOD_3" />
+		</classes>
+	</test> <!-- Test -->
+	<test thread-count="1" name="API_POST">
+		<parameter name="BaseURI" value="https://testingvinu.pythonanywhere.com/api2" />
+		<parameter name="path" value="/employee/" />
+		<parameter name="method" value="POST" />
+		<classes>
+			<class name="selenium.features.app.main.tests.API_Test_MOD_4" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
